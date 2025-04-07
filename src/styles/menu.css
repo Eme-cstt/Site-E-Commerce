@@ -1,0 +1,115 @@
+/* Estilo do menu principal */
+#menu {
+    display: flex; /* Exibe o conteúdo como Flexbox */
+    flex-direction: column; /* Organiza os itens do menu em uma coluna */
+    align-items: center; /* Alinha os itens horizontalmente ao centro */
+    justify-content: center; /* Alinha os itens verticalmente ao centro */
+    min-height: 100vh; /* Define a altura mínima como 100% da altura da tela */
+    color: #DAA520; /* Define a cor do texto como um tom de marrom amarelado */
+}
+
+/* Estilo do container de pratos */
+#dishes {
+    width: 100%; /* Define a largura como 100% do elemento pai */
+    display: flex; /* Exibe os itens dentro de #dishes como Flexbox */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
+    gap: 24px; /* Adiciona um espaço de 24px entre os itens */
+    margin-top: 32px; /* Adiciona uma margem superior de 32px */
+}
+
+/* Estilo para cada prato */
+.dish {
+    display: flex; /* Exibe os itens dentro do prato como Flexbox */
+    flex-direction: column; /* Organiza os itens do prato em uma coluna */
+    align-items: center; /* Alinha os itens do prato horizontalmente ao centro */
+    border-radius: 20px; /* Aplica bordas arredondadas de 20px */
+    gap: 18px; /* Adiciona um espaço de 18px entre os itens */
+    width: 25%; /* Define a largura do prato como 25% do seu container */
+    padding: 20px; /* Aplica 20px de padding dentro do prato */
+    background-color: var(--color-neutral-0); /* Define a cor de fundo com uma variável personalizada */
+    background-color: white; /* Define a cor de fundo como branco (sobrescreve a linha anterior) */
+    box-shadow: 0px 0px 12px 4px; /* Adiciona uma sombra ao redor do prato */
+    position: relative; /* Define a posição do prato como relativa */
+    overflow: hidden; /* Impede que os itens excedam os limites do prato */
+}
+
+/* Estilo do ícone de coração dentro de cada prato */
+.dish-heart {
+    position: absolute; /* Define a posição do coração como absoluta em relação ao prato */
+    background-color: var(--color-primary-6); /* Define a cor de fundo com uma variável personalizada */
+    display: flex; /* Exibe o conteúdo como Flexbox */
+    align-items: center; /* Alinha o ícone ao centro verticalmente */
+    justify-content: center; /* Alinha o ícone ao centro horizontalmente */
+    font-size: 1.563rem; /* Define o tamanho da fonte (ícone) */
+    color: var(--color-primary-1); /* Define a cor do ícone com uma variável personalizada */
+    width: 70px; /* Define a largura do ícone de coração */
+    height: 70px; /* Define a altura do ícone de coração */
+    right: -10px; /* Posiciona o ícone 10px à direita */
+    top: -10px; /* Posiciona o ícone 10px acima */
+    border-radius: 0px 37.5px 0px 42.5px; /* Aplica bordas arredondadas no ícone de coração */
+    color: white; /* Define a cor do texto do ícone como branco */
+}
+
+/* Estilo da descrição do prato */
+.dish-description {
+    color: black; /* Define a cor do texto da descrição como preto */
+    text-align: center; /* Alinha o texto da descrição ao centro */
+}
+
+/* Estilo da classificação do prato */
+.dish-rate i {
+    color: var(--color-primary-6); /* Define a cor dos ícones de classificação com uma variável personalizada */
+}
+
+/* Estilo do container de preço do prato */
+.dish-price {
+    display: flex; /* Exibe os itens dentro do preço como Flexbox */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    gap: 20px; /* Adiciona um espaço de 20px entre os itens */
+}
+
+/* Estilos para a visualização em tela média (max-width: 1170px) */
+@media screen and (max-width: 1170px) {
+    #dishes {
+        flex-wrap: wrap; /* Permite que os itens se ajustem e quebrem em várias linhas */
+        justify-content: center; /* Alinha os itens horizontalmente ao centro */
+    }
+
+    .dish {
+        width: calc(50% - 12px); /* Define a largura dos pratos para 50% do container, com 12px de espaço */
+    }
+}
+
+/* Estilos para a visualização em telas pequenas (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    .dish {
+        width: 100%; /* Define a largura dos pratos como 100% do container */
+    }
+}
+
+/* Estilo para o botão de dropdown (menu suspenso) */
+#dropdown_btn {
+    display: none; /* Oculta o botão de dropdown em telas maiores */
+}
+
+/* Estilos para a visualização em telas pequenas (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    #dropdown_btn {
+        display: block; /* Exibe o botão de dropdown em telas pequenas */
+    }
+
+    #nav_list {
+        display: none; /* Oculta o menu de navegação normal em telas pequenas */
+    }
+
+    .dropdown.active #dropdown_menu {
+        display: block; /* Exibe o menu suspenso quando a classe 'active' é adicionada ao dropdown */
+    }
+}
+
+/* Estilo para ocultar o elemento com ID #ti em telas pequenas */
+@media screen and (max-width: 600px) {
+    #ti {
+        display: none; /* Oculta o elemento com o ID #ti em telas pequenas */
+    }
+}

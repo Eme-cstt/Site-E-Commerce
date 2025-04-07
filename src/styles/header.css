@@ -1,0 +1,235 @@
+/* Estilos para o cabeçalho (header) */
+header {
+    width: 100%; /* Define a largura do cabeçalho como 100% da largura da tela */
+    padding: 28px 8%; /* Aplica um padding de 28px no topo e 8% nas laterais */
+    position: sticky; /* Faz o cabeçalho ficar fixo no topo da tela ao rolar a página */
+    top: 0; /* Define a posição fixa no topo da página */
+    background-color: white; /* Define o fundo do cabeçalho como branco */
+    color: #DAA520; /* Define a cor do texto do cabeçalho */
+    z-index: 3; /* Define o índice z para garantir que o cabeçalho sobreponha outros elementos */
+    margin-top: 10px; /* Adiciona uma margem superior de 10px */
+}
+
+/* Estilos para a barra superior (#top-bar) */
+#top-bar {
+    width: 100%; /* Define a largura da barra como 100% da tela */
+    height: 10px; /* Define a altura da barra como 10px */
+    background-color: #DAA520; /* Define a cor de fundo da barra */
+    position: fixed; /* Faz a barra ficar fixa no topo da tela */
+    top: 0; /* Posiciona a barra no topo */
+    left: 0; /* Posiciona a barra no lado esquerdo */
+    z-index: 1000; /* Define um índice z maior para garantir que fique acima de outros elementos */
+}
+
+/* Estilos para a barra de navegação (#navbar) */
+#navbar {
+    display: flex; /* Usa o Flexbox para organizar os itens */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: space-between; /* Espaça os itens igualmente entre si */
+    padding: 10px; /* Adiciona um padding interno de 10px */
+}
+
+/* Estilos para o container do menu */
+.menu-container {
+    display: flex; /* Exibe o conteúdo dentro do menu como Flexbox */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    gap: 8px; /* Adiciona um espaço de 8px entre os itens */
+}
+
+/* Estilos para o logo da navegação (#nav_logo) */
+#nav_logo {
+    font-size: 50px; /* Define o tamanho da fonte do logo */
+}
+
+/* Estilos para a lista de navegação (#nav_list) */
+#nav_list {
+    display: flex; /* Exibe a lista como Flexbox */
+    list-style: none; /* Remove os marcadores de lista */
+    gap: 48px; /* Adiciona um espaço de 48px entre os itens da lista */
+}
+
+/* Estilos para os itens de navegação */
+.nav-item a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: 800; /* Define o peso da fonte como 800 (negrito) */
+    color: #DAA520 /* Define a cor do texto */
+}
+
+/* Estilos para o item ativo de navegação */
+.nav-item.active a {
+    color: #DAA520; /* Define a cor do texto ativo */
+    border-bottom: 3px solid var(--color-primary-4); /* Adiciona uma linha embaixo do item ativo */
+}
+
+/* Estilos para o botão de navegação móvel (#mobile_btn) */
+#mobile_btn {
+    display: none; /* Oculta o botão de navegação móvel por padrão */
+}
+
+/* Estilos para o menu de navegação móvel (#mobile_menu) */
+#mobile_menu {
+    display: none; /* Oculta o menu de navegação móvel por padrão */
+}
+
+/* Estilos para o dropdown (menu suspenso) */
+.dropdown {
+    position: relative; /* Define a posição do dropdown como relativa */
+    display: inline-block; /* Exibe o dropdown como um bloco inline */
+}
+
+/* Estilos para o botão de dropdown (#dropdown_btn) */
+#dropdown_btn {
+    background: none; /* Remove o fundo do botão */
+    border: none; /* Remove a borda do botão */
+    cursor: pointer; /* Altera o cursor para pointer ao passar sobre o botão */
+    padding: 0; /* Remove o padding interno */
+    width: 30px; /* Define a largura do botão */
+    height: 25px; /* Define a altura do botão */
+    position: relative; /* Permite posicionar o botão em relação a outros elementos */
+}
+
+/* Estilos para as linhas do menu (menu-line) */
+.menu-line {
+    width: 100%; /* Define a largura das linhas como 100% do botão */
+    height: 3px; /* Define a altura das linhas como 3px */
+    background-color: #DAA520; /* Define a cor das linhas */
+    position: absolute; /* Posiciona as linhas de forma absoluta */
+    transition: 0.3s; /* Aplica uma transição suave de 0,3 segundos */
+}
+
+/* Estilos para a primeira linha do menu */
+.menu-line:nth-child(1) {
+    top: 0; /* Posiciona a linha no topo */
+}
+
+/* Estilos para a segunda linha do menu */
+.menu-line:nth-child(2) {
+    top: 50%; /* Posiciona a linha no meio */
+    transform: translateY(-50%); /* Centraliza a linha verticalmente */
+}
+
+/* Estilos para a terceira linha do menu */
+.menu-line:nth-child(3) {
+    bottom: 0; /* Posiciona a linha no fundo */
+}
+
+/* Estilos para o menu suspenso (dropdown menu) */
+#dropdown_menu {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding */
+    margin: 0; /* Remove a margem */
+    position: absolute; /* Posiciona o menu de forma absoluta */
+    top: 100%; /* Posiciona o menu abaixo do botão */
+    left: 0; /* Alinha o menu à esquerda */
+    background-color: white; /* Define o fundo do menu como branco */
+    border: 1px solid #ccc; /* Define uma borda de 1px ao redor do menu */
+    display: none; /* Oculta o menu por padrão */
+}
+
+/* Estilos para os links dentro do menu suspenso */
+#dropdown_menu a {
+    display: block; /* Exibe os links como blocos */
+    padding: 8px 12px; /* Aplica um padding interno nos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #DAA520; /* Define a cor do texto */
+}
+
+/* Exibe o menu suspenso quando o dropdown está ativo */
+.dropdown:hover #dropdown_menu {
+    display: block; /* Torna o menu visível quando o dropdown é hover */
+}
+
+/* Estilos para a imagem do menu */
+.menu img {
+    width: 150px; /* Define a largura da imagem como 150px */
+    height: auto; /* Ajusta a altura automaticamente para manter a proporção */
+}
+
+/* Estilos para telas pequenas (máximo 600px de largura) */
+@media screen and (max-width: 600px) {
+    #ti {
+        display: none; /* Oculta o elemento com ID #ti em telas pequenas */
+    }
+
+    #navbar {
+        flex-direction: row; /* Altera o layout para uma linha em vez de uma coluna */
+        justify-content: space-between; /* Espaça os itens igualmente */
+        align-items: center; /* Alinha os itens verticalmente ao centro */
+    }
+
+    #nav_list {
+        display: none; /* Oculta a lista de navegação em telas pequenas */
+    }
+
+    #dropdown_btn {
+        display: block; /* Exibe o botão de dropdown em telas pequenas */
+    }
+
+    .dropdown.active #dropdown_menu {
+        display: block; /* Exibe o menu dropdown quando está ativo */
+    }
+
+    .menu {
+        display: flex; /* Exibe os itens do menu como Flexbox */
+        align-items: center; /* Alinha os itens verticalmente ao centro */
+    }
+}
+
+/* Estilos para o container com a classe .box */
+#container .box {
+    margin-bottom: 40px; /* Adiciona uma margem inferior de 40px */
+}
+
+/* Estilos para os pratos dentro de #dishes */
+#dishes .dish {
+    margin: 5px; /* Adiciona uma margem de 5px ao redor de cada prato */
+}
+
+/* Estilos para a seção de contato (#contato) */
+#contato {
+    display: flex; /* Exibe o conteúdo como Flexbox */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    width: 100%; /* Define a largura como 100% */
+}
+
+/* Estilos para o formulário de contato (#formContato) */
+#formContato {
+    width: 80%; /* Define a largura do formulário como 80% */
+    max-width: 400px; /* Define a largura máxima do formulário como 400px */
+    margin: 50px auto; /* Centraliza o formulário e adiciona uma margem de 50px */
+    padding: 20px; /* Adiciona padding interno de 20px */
+    border: 1px solid #ccc; /* Adiciona uma borda cinza ao redor do formulário */
+    box-sizing: border-box; /* Inclui padding e borda nas dimensões totais */
+}
+
+/* Estilos para grupos de formulário (.form-group) */
+.form-group {
+    display: flex; /* Exibe os itens do grupo como Flexbox */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    margin-bottom: 15px; /* Adiciona uma margem inferior de 15px */
+}
+
+/* Estilos para os elementos de entrada obrigatórios */
+.required {
+    color: red; /* Define a cor do texto como vermelho */
+}
+
+/* Estilos para mensagens de erro */
+.error-message {
+    color: red; /* Define a cor da mensagem de erro como vermelho */
+    font-size: 12px; /* Define o tamanho da fonte da mensagem de erro */
+    display: none; /* Oculta a mensagem de erro por padrão */
+}
+
+/* Exibe a mensagem de erro quando o input ou textarea é inválido */
+input:invalid + .error-message, textarea:invalid + .error-message {
+    display: block; /* Torna a mensagem de erro visível */
+}
+
+/* Estilos para listas com marcadores */
+.checklist {
+    list-style-type: disc; /* Define o estilo da lista como marcadores de disco */
+    padding-left: 20px; /* Adiciona um padding à esquerda da lista */
+}

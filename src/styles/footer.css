@@ -1,0 +1,34 @@
+footer {
+    position: relative; /* Define a posição do footer como relativa, permitindo a manipulação de seu posicionamento se necessário */
+    width: 100%; /* Define a largura do footer como 100% da largura da tela */
+    background: #DAA520; /* Define a cor de fundo do footer como um tom específico de amarelo */
+    color: white; /* Define a cor do texto no footer como branco */
+    text-align: center; /* Centraliza o texto dentro do footer */
+    padding: 20px 0; /* Adiciona um espaçamento interno de 20px no topo e no fundo do footer */
+}
+
+footer img {
+    width: 100%; /* Define a largura das imagens dentro do footer como 100% da largura do elemento pai */
+    display: block; /* Garante que a imagem seja tratada como um bloco, removendo qualquer espaço indesejado abaixo dela */
+}
+
+#footer_items {
+    margin-top: -10px; /* Adiciona uma margem superior negativa de 10px aos itens no footer, movendo-os ligeiramente para cima */
+}
+
+#copyright {
+    font-size: 14px; /* Define o tamanho da fonte do texto de copyright como 14px */
+}
+
+#copyright a {
+    color: white; /* Define a cor do link dentro do texto de copyright como branca */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
+
+#copyright a:hover {
+    text-decoration: underline; /* Quando o mouse passa sobre o link, ele recebe o sublinhado */
+}
+
+#github-link {
+    cursor: pointer; /* Define o cursor como uma mãozinha (indicando um item clicável) quando o mouse passa sobre o link do GitHub */
+}

@@ -1,0 +1,180 @@
+/* Importa a fonte 'Poppins' do Google Fonts para ser usada no site */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Importa os arquivos CSS específicos para diferentes partes do site */
+@import url('header.css');
+@import url('home.css');
+@import url('menu.css');
+@import url('testimonials.css');
+@import url('footer.css');
+
+/* Aplica estilo a todos os elementos da página */
+* {
+    font-family: 'Poppins', sans-serif; /* Define a fonte padrão para todos os elementos como 'Poppins' */
+    margin: 0; /* Remove margens padrão de todos os elementos */
+    padding: 0; /* Remove os preenchimentos padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui bordas e preenchimento no cálculo do tamanho do elemento */
+}
+
+/* Aplica um efeito de rolagem suave para a página */
+html {
+    scroll-behavior: smooth; 
+}
+
+/* Define a cor de fundo da página */
+body {
+    background-color: var(--color-primary-1); /* Define o fundo da página com uma variável de cor personalizada */
+}
+
+/* Aplica padding nas seções da página */
+section {
+    padding: 28px 8%; /* Define 28px de padding nas laterais superior e inferior, e 8% nas laterais esquerda e direita */
+}
+
+/* Estiliza os botões com a classe .btn-default */
+.btn-default {
+    border: none; /* Remove a borda padrão */
+    display: flex; /* Exibe o conteúdo como um Flexbox */
+    align-items: center; /* Alinha os itens do botão no centro verticalmente */
+    justify-content: center; /* Alinha os itens do botão no centro horizontalmente */
+    background-color: var(--color-primary-5); /* Define a cor de fundo do botão com uma variável de cor personalizada */
+    border-radius: 12px; /* Aplica bordas arredondadas de 12px */
+    padding: 10px 14px; /* Aplica 10px de padding vertical e 14px de padding horizontal */
+    font-weight: 600; /* Define o peso da fonte como 600 (negrito) */
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao redor do botão */
+    cursor: pointer; /* Define o cursor como "ponteiro" para indicar interatividade */
+    transition: background-color .3s ease; /* Adiciona uma transição suave na cor de fundo ao passar o mouse */
+}
+
+/* Estilo do botão quando o mouse passa sobre ele */
+.btn-default:hover {
+    background-color: var(--color-primary-3); /* Altera a cor de fundo do botão quando o mouse passa sobre ele */
+}
+
+/* Estiliza os botões de redes sociais */
+.social-media-buttons {
+    display: flex; /* Exibe os botões de redes sociais em um layout Flexbox */
+    gap: 18px; /* Adiciona um espaço de 18px entre cada botão */
+}
+
+/* Estilo individual dos links dentro de .social-media-buttons */
+.social-media-buttons a {
+    display: flex; /* Exibe os links como um Flexbox */
+    align-items: center; /* Alinha os itens (ícones) verticalmente ao centro */
+    justify-content: center; /* Alinha os itens (ícones) horizontalmente ao centro */
+    width: 45px; /* Define a largura dos botões sociais */
+    height: 40px; /* Define a altura dos botões sociais */
+    background-color: var(--color-neutral-0); /* Define a cor de fundo com uma variável personalizada */
+    font-size: 1.25rem; /* Define o tamanho da fonte dos ícones */
+    border-radius: 10px; /* Aplica bordas arredondadas de 10px */
+    text-decoration: none; /* Remove a decoração padrão de texto (como sublinhado) */
+    color: var(--color-neutral-1); /* Define a cor do texto (ícones) com uma variável personalizada */
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1); /* Aplica uma sombra suave ao redor do botão */
+    transition: box-shadow .3s ease; /* Adiciona uma transição suave na sombra ao passar o mouse */
+}
+
+/* Estilo do botão de redes sociais quando o mouse passa sobre ele */
+.social-media-buttons a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1); /* Aumenta o tamanho da sombra quando o mouse passa sobre o link */
+}
+
+/* Estilo do título de seção */
+.section-title {
+    color: var(--color-primary-6); /* Define a cor do título com uma variável personalizada */
+    font-size: 1.563rem; /* Define o tamanho da fonte do título */
+}
+
+/* Estilo do subtítulo de seção */
+.section-subtitle {
+    font-size: 2.1875rem; /* Define o tamanho da fonte do subtítulo */
+}
+
+/* Estilo específico para a seção de contato */
+#contato{
+    text-align: center; /* Alinha o texto do contato ao centro */
+}
+
+/* Estiliza o elemento <center> (não recomendado, mas usado no código) */
+center {
+    display: flex; /* Exibe o conteúdo como um Flexbox */
+    justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+    height: 100vh; /* Define a altura como 100% da altura da janela */
+    padding: 20px; /* Aplica 20px de padding ao redor do conteúdo */
+}
+
+/* Estiliza os formulários */
+form {
+    display: flex; /* Exibe os itens dentro do formulário como um Flexbox */
+    flex-direction: column; /* Organiza os itens do formulário em uma coluna */
+    gap: 15px; /* Define o espaçamento entre os itens */
+    background: white; /* Define o fundo do formulário como branco */
+    padding: 30px; /* Adiciona 30px de padding dentro do formulário */
+    border-radius: 8px; /* Aplica bordas arredondadas de 8px */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave ao redor do formulário */
+    width: 400px; /* Define a largura do formulário como 400px */
+}
+
+/* Estilo para o container de formulários */
+#container {
+    display: flex; /* Exibe os itens dentro do container como Flexbox */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    gap: 0; /* Remove o espaçamento entre os itens */
+}
+
+/* Estilo para as caixas de entrada de formulário */
+.box {
+    margin: 0; /* Remove a margem de cada caixa */
+    padding: 10px; /* Aplica 10px de padding dentro da caixa */
+}
+
+/* Estilo para os títulos e descrições dentro do formulário */
+.title, .description {
+    margin: 0; /* Remove a margem dos títulos e descrições */
+}
+
+/* Estiliza os grupos de entrada de formulário */
+.input-group {
+    display: flex; /* Exibe os itens dentro do grupo como um Flexbox */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    margin-bottom: 15px; /* Adiciona uma margem inferior de 15px */
+}
+
+/* Estilo dos rótulos dentro dos grupos de entrada */
+.input-group label {
+    font-weight: bold; /* Aplica um peso de fonte em negrito para os rótulos */
+    margin-bottom: 5px; /* Adiciona 5px de margem abaixo do rótulo */
+    color: #333; /* Define a cor do rótulo como um tom escuro de cinza */
+}
+
+/* Estilo dos campos de entrada (input e textarea) */
+input, textarea {
+    width: 100%; /* Define que os campos ocuparão 100% da largura do elemento pai */
+    padding: 10px; /* Adiciona 10px de padding dentro do campo */
+    border: 1px solid #DAA520; /* Define uma borda com uma cor personalizada */
+    border-radius: 4px; /* Aplica bordas arredondadas de 4px */
+    font-size: 10px; /* Define o tamanho da fonte como 10px */
+}
+
+/* Estilo do botão dentro do formulário */
+button {
+    width: 100%; /* Define que o botão ocupará 100% da largura do elemento pai */
+    padding: 12px; /* Aplica 12px de padding dentro do botão */
+    background: #DAA520; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto como branco */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 4px; /* Aplica bordas arredondadas de 4px */
+    cursor: pointer; /* Altera o cursor para ponteiro quando o mouse passa sobre o botão */
+    font-size: 16px; /* Define o tamanho da fonte do botão */
+}
+
+/* Estilo do botão quando o mouse passa sobre ele */
+button:hover {
+    background: #DAA520; /* Muda a cor de fundo do botão ao passar o mouse sobre ele */
+}
+
+/* Estilo para o texto com ID #ti */
+#ti {
+    color: #DAA520; /* Define a cor do texto como um tom de marrom amarelado */
+    font-size: 25px; /* Define o tamanho da fonte como 25px */
+}

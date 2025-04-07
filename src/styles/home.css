@@ -1,0 +1,231 @@
+/* Estilos para a seção #home */
+#home {
+    display: flex; /* Exibe o conteúdo como Flexbox */
+    min-height: calc(10vh - 91px); /* Define a altura mínima da seção como 10% da altura da tela menos 91px */
+    position: relative; /* Define a posição do elemento como relativa para permitir posicionamento absoluto de elementos filhos */
+    color: black; /* Define a cor do texto como preto */
+    background-color: white; /* Define o fundo da seção como branco */
+}
+
+/* Estilos para a seção de call-to-action (CTA) */
+#cta {
+    width: 35%; /* Define a largura da seção como 35% do container pai */
+    display: flex; /* Exibe o conteúdo dentro da seção como Flexbox */
+    flex-direction: column; /* Organiza os itens dentro da seção em uma coluna */
+    gap: 28px; /* Adiciona um espaço de 28px entre os itens */
+    margin-top: 5%; /* Adiciona uma margem superior de 5% */
+}
+
+/* Estilo para o título dentro de #cta */
+#cta .title {
+    font-size: 1.5rem; /* Define o tamanho da fonte do título */
+    color: var(--color-neutral-1); /* Define a cor do título com uma variável personalizada */
+}
+
+/* Estilo para o texto em destaque dentro do título em #cta */
+#cta .title span {
+    color: var(--color-primary-6); /* Define a cor do texto dentro do <span> do título com uma variável personalizada */
+}
+
+/* Estilo para a descrição dentro de #cta */
+#cta .description {
+    font-size: 1.2rem; /* Define o tamanho da fonte da descrição */
+}
+
+/* Estilo para o container de botões dentro de #cta */
+#cta_buttons {
+    display: flex; /* Exibe os botões dentro de #cta como Flexbox */
+    gap: 24px; /* Adiciona um espaço de 24px entre os botões */
+}
+
+/* Estilo para os links dentro de #cta_buttons */
+#cta_buttons a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: var(--color-neutral-1); /* Define a cor dos links com uma variável personalizada */
+}
+
+/* Estilo para o botão de telefone dentro de #cta */
+#phone_button {
+    display: flex; /* Exibe os itens dentro do botão como Flexbox */
+    gap: 8px; /* Adiciona um espaço de 8px entre os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    background-color: #ffffff; /* Define o fundo do botão como branco */
+    padding: 8px 14px; /* Adiciona padding dentro do botão */
+    font-weight: 500; /* Define o peso da fonte como 500 */
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao redor do botão */
+    border-radius: 12px; /* Aplica bordas arredondadas ao botão */
+}
+
+/* Remove a sombra do botão dentro de #phone_button */
+#phone_button button {
+    box-shadow: none; /* Remove a sombra do botão dentro de #phone_button */
+}
+
+/* Estilo para a forma geométrica (shape) dentro de #home */
+.shape {
+    background-color: var(--color-primary-2); /* Define a cor de fundo da forma com uma variável personalizada */
+    width: 50%; /* Define a largura da forma como 50% do container pai */
+    height: 100%; /* Define a altura da forma como 100% do container pai */
+    position: absolute; /* Define a posição da forma como absoluta */
+    border-radius: 40% 30% 0% 20%; /* Aplica bordas arredondadas de diferentes tamanhos na forma */
+    top: 0; /* Posiciona a forma no topo do container pai */
+    right: 0; /* Posiciona a forma à direita do container pai */
+    z-index: 1; /* Define a prioridade da camada da forma, permitindo que ela fique sobre outros elementos */
+}
+
+/* Estilos para a visualização em telas médias (max-width: 1170px) */
+@media screen and (max-width: 1170px) {
+    #home {
+        min-height: 100%; /* Define a altura mínima de #home como 100% da altura da tela em telas menores */
+        padding-top: 0px; /* Remove o padding superior */
+    }
+}
+
+/* Estilos para a visualização em telas muito pequenas (max-width: 450px) */
+@media screen and (max-width: 450px) {
+    #phone_button button {
+        display: none; 
+    }
+}
+
+/* Estilo para o elemento com ID #id */
+#id {
+    color: #DAA520; /* Define a cor do texto como um tom de marrom amarelado */
+}
+
+/* Estilo para o container com o ID #container */
+#container {
+    display: flex; /* Exibe o conteúdo dentro de #container como Flexbox */
+    flex-direction: column; /* Organiza os itens dentro de #container em uma coluna */
+    gap: 60px; /* Adiciona um espaço de 60px entre os itens */
+}
+
+/* Estilos gerais para o corpo da página */
+body {
+    border-left: 15px solid #DAA520; /* Adiciona uma borda esquerda de 15px de largura com cor amarela/marrom */
+    border-right: 15px solid #DAA520; /* Adiciona uma borda direita de 15px de largura com cor amarela/marrom */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+}
+
+
+.popup-container {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Estilo do conteúdo do popup */
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+/* Botão de fechar do popup */
+.close-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: #e60000;
+}
+
+  /* Estilos para o layout da seção de serviços */
+  #dishes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Garante que os itens se ajustem na linha quando necessário */
+}
+
+.dish {
+    width: 220px; /* Largura fixa dos quadrados */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.dish:hover {
+    transform: scale(1.1); /* Efeito de zoom */
+}
+
+.dish img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.dish-title {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.dish-description {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Estilo do fundo do popup (escuro e transparente) */
+.popup-container {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+
+
+
+
+
+
+
+/* Estilo do conteúdo do popup */
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+/* Botão de fechar do popup */
+.close-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: #e60000;
+}

@@ -1,0 +1,92 @@
+#testimonials {
+    min-height: calc(100vh - 91px); /* Define a altura mínima da seção como 100% da altura da janela (viewport), subtraindo 91px para compensar o espaço de outros elementos (como o cabeçalho) */
+    display: flex; /* Define que os elementos dentro da seção serão dispostos utilizando o modelo de layout Flexbox */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    justify-content: center; /* Alinha horizontalmente os itens no centro */
+    gap: 48px; /* Define um espaço de 48px entre os itens dentro da seção */
+}
+
+#testimonial_chef {
+    width: 500px; /* Define a largura da imagem do chef como 500px */
+    height: auto; /* A altura da imagem será ajustada automaticamente para manter a proporção */
+}
+
+#testimonials .section-subtitle {
+    font-size: 3rem; /* Define o tamanho da fonte do subtítulo da seção como 3rem (relativo ao tamanho da fonte base) */
+}
+
+#testimonials_content {
+    width: 50%; /* Define a largura do conteúdo de testemunhos como 50% da largura do elemento pai */
+}
+
+#feedbacks {
+    display: flex; /* Define que os feedbacks serão dispostos com o layout Flexbox */
+    flex-direction: column; /* Organiza os feedbacks em uma coluna */
+    gap: 20px; /* Define um espaçamento de 20px entre os feedbacks */
+    margin-bottom: 40px; /* Define uma margem de 40px abaixo da seção de feedbacks */
+    margin-top: 30px; /* Define uma margem de 30px acima da seção de feedbacks */
+}
+
+.feedback {
+    display: flex; /* Define que o layout do feedback será baseado no Flexbox */
+    align-items: center; /* Alinha os itens (como imagem e conteúdo) verticalmente ao centro */
+    gap: 20px; /* Define um espaçamento de 20px entre os itens dentro de um feedback */
+    background-color: var(--color-neutral-0); /* Define o fundo do feedback com uma cor neutra personalizada */
+    padding: 12px; /* Adiciona um preenchimento interno de 12px ao redor do conteúdo do feedback */
+    border-radius: 12px; /* Aplica bordas arredondadas de 12px no feedback */
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao feedback para dar um efeito de profundidade */
+}
+
+.feedback-avatar {
+    width: 100px; /* Define a largura do avatar do feedback como 100px */
+    height: 100px; /* Define a altura do avatar do feedback como 100px */
+    border-radius: 100%; /* Torna o avatar circular */
+    object-fit: cover; /* Ajusta a imagem do avatar para cobrir completamente a área do círculo, sem distorcer a imagem */
+}
+
+.feedback-content p {
+    display: flex; /* Organiza os parágrafos de conteúdo do feedback com o layout Flexbox */
+    justify-content: space-between; /* Distribui os parágrafos com espaço igual entre eles */
+}
+
+.feedback-content p span {
+    color: var(--color-primary-6); /* Altera a cor do texto dentro do span para a cor primária personalizada */
+}
+
+/* Estilos para telas com largura máxima de 1170px (por exemplo, tablets) */
+@media screen and (max-width: 1170px) {
+    #testimonials {
+        flex-direction: column; /* Altera a direção do layout para uma coluna, empilhando os elementos verticalmente */
+    }
+
+    #testimonials .section-subtitle {
+        text-align: center; /* Centraliza o texto do subtítulo na tela */
+        font-size: 2.5rem; /* Diminui o tamanho da fonte do subtítulo para 2.5rem */
+    }
+
+    #testimonial_chef {
+        display: none; /* Oculta a imagem do chef em telas menores */
+    }
+
+    #testimonials_content {
+        width: 70%; /* Aumenta a largura do conteúdo de testemunhos para 70% da largura do elemento pai */
+        display: flex; /* Organiza os itens dentro de #testimonials_content com o layout Flexbox */
+        flex-direction: column; /* Organiza os itens em uma coluna */
+        align-items: center; /* Alinha os itens verticalmente no centro */
+    }
+}
+
+/* Estilos para telas com largura máxima de 600px (por exemplo, smartphones) */
+@media screen and (max-width: 600px) {
+    #testimonials .section-subtitle {
+        font-size: 2rem; /* Diminui o tamanho da fonte do subtítulo para 2rem */
+    }
+
+    #testimonials_content {
+        width: 100%; /* Faz com que o conteúdo de testemunhos ocupe 100% da largura disponível */
+    }
+
+    .feedback {
+        flex-direction: column; /* Altera a direção do layout do feedback para coluna, empilhando a imagem e o conteúdo do feedback verticalmente */
+    }
+}
